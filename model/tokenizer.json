@@ -1,0 +1,426 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "[PAD]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "[UNK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "[CLS]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "[SEP]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "[MASK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "Whitespace"
+  },
+  "post_processor": {
+    "type": "TemplateProcessing",
+    "single": [
+      {
+        "SpecialToken": {
+          "id": "[CLS]",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "[SEP]",
+          "type_id": 0
+        }
+      }
+    ],
+    "pair": [
+      {
+        "SpecialToken": {
+          "id": "[CLS]",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "[SEP]",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "B",
+          "type_id": 1
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "[SEP]",
+          "type_id": 1
+        }
+      }
+    ],
+    "special_tokens": {
+      "[CLS]": {
+        "id": "[CLS]",
+        "ids": [
+          2
+        ],
+        "tokens": [
+          "[CLS]"
+        ]
+      },
+      "[MASK]": {
+        "id": "[MASK]",
+        "ids": [
+          4
+        ],
+        "tokens": [
+          "[MASK]"
+        ]
+      },
+      "[PAD]": {
+        "id": "[PAD]",
+        "ids": [
+          0
+        ],
+        "tokens": [
+          "[PAD]"
+        ]
+      },
+      "[SEP]": {
+        "id": "[SEP]",
+        "ids": [
+          3
+        ],
+        "tokens": [
+          "[SEP]"
+        ]
+      },
+      "[UNK]": {
+        "id": "[UNK]",
+        "ids": [
+          1
+        ],
+        "tokens": [
+          "[UNK]"
+        ]
+      }
+    }
+  },
+  "decoder": null,
+  "model": {
+    "type": "WordLevel",
+    "vocab": {
+      "[PAD]": 0,
+      "[UNK]": 1,
+      "[CLS]": 2,
+      "[SEP]": 3,
+      "[MASK]": 4,
+      "AAAA": 5,
+      "AAAC": 6,
+      "AAAG": 7,
+      "AAAT": 8,
+      "AACA": 9,
+      "AACC": 10,
+      "AACG": 11,
+      "AACT": 12,
+      "AAGA": 13,
+      "AAGC": 14,
+      "AAGG": 15,
+      "AAGT": 16,
+      "AATA": 17,
+      "AATC": 18,
+      "AATG": 19,
+      "AATT": 20,
+      "ACAA": 21,
+      "ACAC": 22,
+      "ACAG": 23,
+      "ACAT": 24,
+      "ACCA": 25,
+      "ACCC": 26,
+      "ACCG": 27,
+      "ACCT": 28,
+      "ACGA": 29,
+      "ACGC": 30,
+      "ACGG": 31,
+      "ACGT": 32,
+      "ACTA": 33,
+      "ACTC": 34,
+      "ACTG": 35,
+      "ACTT": 36,
+      "AGAA": 37,
+      "AGAC": 38,
+      "AGAG": 39,
+      "AGAT": 40,
+      "AGCA": 41,
+      "AGCC": 42,
+      "AGCG": 43,
+      "AGCT": 44,
+      "AGGA": 45,
+      "AGGC": 46,
+      "AGGG": 47,
+      "AGGT": 48,
+      "AGTA": 49,
+      "AGTC": 50,
+      "AGTG": 51,
+      "AGTT": 52,
+      "ATAA": 53,
+      "ATAC": 54,
+      "ATAG": 55,
+      "ATAT": 56,
+      "ATCA": 57,
+      "ATCC": 58,
+      "ATCG": 59,
+      "ATCT": 60,
+      "ATGA": 61,
+      "ATGC": 62,
+      "ATGG": 63,
+      "ATGT": 64,
+      "ATTA": 65,
+      "ATTC": 66,
+      "ATTG": 67,
+      "ATTT": 68,
+      "CAAA": 69,
+      "CAAC": 70,
+      "CAAG": 71,
+      "CAAT": 72,
+      "CACA": 73,
+      "CACC": 74,
+      "CACG": 75,
+      "CACT": 76,
+      "CAGA": 77,
+      "CAGC": 78,
+      "CAGG": 79,
+      "CAGT": 80,
+      "CATA": 81,
+      "CATC": 82,
+      "CATG": 83,
+      "CATT": 84,
+      "CCAA": 85,
+      "CCAC": 86,
+      "CCAG": 87,
+      "CCAT": 88,
+      "CCCA": 89,
+      "CCCC": 90,
+      "CCCG": 91,
+      "CCCT": 92,
+      "CCGA": 93,
+      "CCGC": 94,
+      "CCGG": 95,
+      "CCGT": 96,
+      "CCTA": 97,
+      "CCTC": 98,
+      "CCTG": 99,
+      "CCTT": 100,
+      "CGAA": 101,
+      "CGAC": 102,
+      "CGAG": 103,
+      "CGAT": 104,
+      "CGCA": 105,
+      "CGCC": 106,
+      "CGCG": 107,
+      "CGCT": 108,
+      "CGGA": 109,
+      "CGGC": 110,
+      "CGGG": 111,
+      "CGGT": 112,
+      "CGTA": 113,
+      "CGTC": 114,
+      "CGTG": 115,
+      "CGTT": 116,
+      "CTAA": 117,
+      "CTAC": 118,
+      "CTAG": 119,
+      "CTAT": 120,
+      "CTCA": 121,
+      "CTCC": 122,
+      "CTCG": 123,
+      "CTCT": 124,
+      "CTGA": 125,
+      "CTGC": 126,
+      "CTGG": 127,
+      "CTGT": 128,
+      "CTTA": 129,
+      "CTTC": 130,
+      "CTTG": 131,
+      "CTTT": 132,
+      "GAAA": 133,
+      "GAAC": 134,
+      "GAAG": 135,
+      "GAAT": 136,
+      "GACA": 137,
+      "GACC": 138,
+      "GACG": 139,
+      "GACT": 140,
+      "GAGA": 141,
+      "GAGC": 142,
+      "GAGG": 143,
+      "GAGT": 144,
+      "GATA": 145,
+      "GATC": 146,
+      "GATG": 147,
+      "GATT": 148,
+      "GCAA": 149,
+      "GCAC": 150,
+      "GCAG": 151,
+      "GCAT": 152,
+      "GCCA": 153,
+      "GCCC": 154,
+      "GCCG": 155,
+      "GCCT": 156,
+      "GCGA": 157,
+      "GCGC": 158,
+      "GCGG": 159,
+      "GCGT": 160,
+      "GCTA": 161,
+      "GCTC": 162,
+      "GCTG": 163,
+      "GCTT": 164,
+      "GGAA": 165,
+      "GGAC": 166,
+      "GGAG": 167,
+      "GGAT": 168,
+      "GGCA": 169,
+      "GGCC": 170,
+      "GGCG": 171,
+      "GGCT": 172,
+      "GGGA": 173,
+      "GGGC": 174,
+      "GGGG": 175,
+      "GGGT": 176,
+      "GGTA": 177,
+      "GGTC": 178,
+      "GGTG": 179,
+      "GGTT": 180,
+      "GTAA": 181,
+      "GTAC": 182,
+      "GTAG": 183,
+      "GTAT": 184,
+      "GTCA": 185,
+      "GTCC": 186,
+      "GTCG": 187,
+      "GTCT": 188,
+      "GTGA": 189,
+      "GTGC": 190,
+      "GTGG": 191,
+      "GTGT": 192,
+      "GTTA": 193,
+      "GTTC": 194,
+      "GTTG": 195,
+      "GTTT": 196,
+      "TAAA": 197,
+      "TAAC": 198,
+      "TAAG": 199,
+      "TAAT": 200,
+      "TACA": 201,
+      "TACC": 202,
+      "TACG": 203,
+      "TACT": 204,
+      "TAGA": 205,
+      "TAGC": 206,
+      "TAGG": 207,
+      "TAGT": 208,
+      "TATA": 209,
+      "TATC": 210,
+      "TATG": 211,
+      "TATT": 212,
+      "TCAA": 213,
+      "TCAC": 214,
+      "TCAG": 215,
+      "TCAT": 216,
+      "TCCA": 217,
+      "TCCC": 218,
+      "TCCG": 219,
+      "TCCT": 220,
+      "TCGA": 221,
+      "TCGC": 222,
+      "TCGG": 223,
+      "TCGT": 224,
+      "TCTA": 225,
+      "TCTC": 226,
+      "TCTG": 227,
+      "TCTT": 228,
+      "TGAA": 229,
+      "TGAC": 230,
+      "TGAG": 231,
+      "TGAT": 232,
+      "TGCA": 233,
+      "TGCC": 234,
+      "TGCG": 235,
+      "TGCT": 236,
+      "TGGA": 237,
+      "TGGC": 238,
+      "TGGG": 239,
+      "TGGT": 240,
+      "TGTA": 241,
+      "TGTC": 242,
+      "TGTG": 243,
+      "TGTT": 244,
+      "TTAA": 245,
+      "TTAC": 246,
+      "TTAG": 247,
+      "TTAT": 248,
+      "TTCA": 249,
+      "TTCC": 250,
+      "TTCG": 251,
+      "TTCT": 252,
+      "TTGA": 253,
+      "TTGC": 254,
+      "TTGG": 255,
+      "TTGT": 256,
+      "TTTA": 257,
+      "TTTC": 258,
+      "TTTG": 259,
+      "TTTT": 260
+    },
+    "unk_token": "[UNK]"
+  }
+}
